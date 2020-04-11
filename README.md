@@ -1,6 +1,6 @@
 This is my first React app built using fetch. It's a gameboy "pokedex" that fetchs from pokeapi.co. Below you can find some of my "Production Diary" which goes through some of the issues that I ran into daily.
 
-[Here] (https://kariandreah.github.io/pokedex) is the app live. 
+[Here](https://kariandreah.github.io/pokedex) is the app live. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
