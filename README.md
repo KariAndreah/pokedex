@@ -1,68 +1,64 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Day 1 notes:
+I had to take a break from my head-to-head project but able to take what I learned for this project. 
+I am nesting components within my big component. Havng issues getting more that two types for each pokemon to show up. May use a ternary operator. 
+******************Issues***********************
+Getting all types to show up.
+******************Tomorrow***********************
+This about auto fill searches, but would have to hard pokemon. Put in the next version maybe. Michelle said I should have autocorrect even if I have to hard code it. 
 
-### `yarn start`
+ let types1 = []; 
+        if((this.state.data.types.length)> 0){
+            for(var i = 0; i < this.data.types.length; i ++){
+                (types1.push(this.data.types[i].type.name))
+            }
+        }
+        console.log(types1);
+        this.setState({type: types1})
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Day 2 notes:
+I built a design of the pokedex. 
+*****************Issues***************************
+I couldn't get my state done in react. Need to look up rules again for getting the values. I will work on it later
+*****************Tomorrow*************************
+Get the rest of the states tomorrow. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Day 3 notes:
+Finally was able to get images into the pokedox. I used an iff statement to show what was loaded. Also made sure to make the input.toLowerCase() so that the search will work regardless of capitalization. Started designing the gameboy. Don't know what design I definitely want. 
+******************Issues***********************
+Most issues are design wise. Will probably ask Michelle for help. 
+******************Tomorrow*********************
+Maybe finish the whole project tomorrow. Gonna figure out where to input the data tomorrow. 
 
-### `yarn test`
+Day 4 notes:
+Figured out how to pass props to grandchildren. Actually pretty easy, so I shouldve figured it out easier. Also most done, just need to design the about and the stats section. 
+******************Tomorrow***********************
+Design and finish up the app, specifically About and Stats section. About section should have the "types" as well in colors. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Day 5 notes:
+Figured out how to style the about and the info sections. Probably can clean up the code a little bit, probably a lot a bit. i.d. maybe use a switch instead of if and else if statements. Learned better css selector techniques, and fixing some flexbox issues.
+*****************Issues****************************
+Feel like perhaps the project isn't as impressive as I would've liked. I probably need to clean up a bunch of code. I may want to see how to go to the next pokemon via pushing the A or B button on the gameboy. Also need to clean up edge cases, i.e. if someone searches something empty. If someone pushes about or stats before loading the .fetch()
+*****************Tomorrow*************************
+Work on all issues, fix all the edge cases, once everything is done, clean up all of my code. Perhaps make the background look a better as well.
 
-### `yarn build`
+Day 6 note:
+Fixed some edge cases by changing the logic in the pokewindow component. 
+Also figured out how to use one fetch when I need to scroll up and down through pokemon. When the search field is empty it console.logs errors. Not necessarily sure if I need to fix that. Finished the design. 
+Edge cases I worked out:
+-If the input is empty, leave the logo.
+-If input is empty, above and stats stay on logo. Up and down stay on logo. 
+-If the user goes too low, go back to logo. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  onDownButton = () => {
+        if (this.state.value === '') {
+            console.log('Empty Search Field')
+            this.setState({wrongSpelling:false});
+        } else {
+            this.onFetchData(this.state.data.id - 1);
+            this.setState({wrongSpelling:false});
+        }
+    }

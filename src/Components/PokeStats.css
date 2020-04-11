@@ -1,0 +1,11 @@
+.statsTable{
+    text-align: left;
+    border-collapse: collapse;
+    margin-top:-20px;
+    width: 250px;
+}
+.statsTable >tbody > tr > td{
+    border: 2px solid black;
+    font-size: 16px;
+    padding:2px;
+}

@@ -1,0 +1,86 @@
+
+#PokeSearch{
+    margin-left: auto;
+    margin-right: auto;
+}
+.PokeSearch{
+    z-index: 10;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    width: 360px;
+}
+.searchBox{
+    flex: 1;
+    width:300px;
+    margin: auto;
+}
+.rowButtons{
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width:350px;
+    justify-content: space-around;
+}
+.section{
+    flex:1;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: space-around;
+}
+.plusButton{
+    height: 75px;
+    padding-top:3em;
+    margin-left: 1em;
+}
+.bottomButtons{
+    margin-top: 13rem;
+    justify-content: space-between;
+}
+
+.aboutButton{
+    display: inline;
+    margin-right: 4px;
+    background-color: black;
+    border-color: darkslategrey;
+}
+.statsButton{
+    display: inline;
+    margin-left: 4px;
+    background-color: black;
+    border-color: darkslategrey;
+    margin-bottom: 8px;
+}
+.labels{
+    display: inline;
+    padding: 5px;
+    color:black;
+    padding-top: 5px;
+}
+
+.changeButtons{
+    height:250px;
+    padding-top: 45px;
+}
+.upButton{
+    background-color: black;
+    border-radius: 50%;
+    border: darkslategrey 1px solid;
+    height: 45px;
+    width: 45px; 
+    color:white;
+    display: flex;
+    margin-left: 35px;
+    padding:13px;
+}
+.downButton{
+    background-color: black;
+    border: darkslategrey 1px solid;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px; 
+    color:white;
+    display: flex;
+    padding:7px;
+}

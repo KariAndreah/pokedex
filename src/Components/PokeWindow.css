@@ -1,0 +1,18 @@
+.pokewindow{
+    height:250px;
+    width:275px;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: black 20px solid; 
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 10px;
+    display: flex;
+}
+
+.pokeball{
+    height: 6em;
+    width:12em;
+    margin:auto;
+}
+
