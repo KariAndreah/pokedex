@@ -44,7 +44,7 @@ class Gameboy extends Component {
             console.log('Empty Search Field')
             this.setState({wrongSpelling:true});
         } else {
-            this.onFetchData(this.state.value);
+            this.onFetchData(this.state.value.toLowerCase());
             this.setState({wrongSpelling:false});
         }
     }
