@@ -1,3 +1,7 @@
+This is my first React app built using fetch. It's a gameboy "pokedex" that fetchs from pokeapi.co. Below you can find some of my "Production Diary" which goes through some of the issues that I ran into daily.
+
+[Here] (https://kariandreah.github.io/pokedex) is the app live. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
@@ -8,15 +12,6 @@ I am nesting components within my big component. Havng issues getting more that 
 Getting all types to show up.
 ******************Tomorrow***********************
 This about auto fill searches, but would have to hard pokemon. Put in the next version maybe. Michelle said I should have autocorrect even if I have to hard code it. 
-
- let types1 = []; 
-        if((this.state.data.types.length)> 0){
-            for(var i = 0; i < this.data.types.length; i ++){
-                (types1.push(this.data.types[i].type.name))
-            }
-        }
-        console.log(types1);
-        this.setState({type: types1})
 
 Day 2 notes:
 I built a design of the pokedex. 
@@ -52,13 +47,3 @@ Edge cases I worked out:
 -If input is empty, above and stats stay on logo. Up and down stay on logo. 
 -If the user goes too low, go back to logo. 
 
-
-  onDownButton = () => {
-        if (this.state.value === '') {
-            console.log('Empty Search Field')
-            this.setState({wrongSpelling:false});
-        } else {
-            this.onFetchData(this.state.data.id - 1);
-            this.setState({wrongSpelling:false});
-        }
-    }
