@@ -47,3 +47,6 @@ Edge cases I worked out:
 -If input is empty, above and stats stay on logo. Up and down stay on logo. 
 -If the user goes too low, go back to logo. 
 
+Day 7 note:
+Changed so that if you hit up the pokedex goes to pokemon #1.
+

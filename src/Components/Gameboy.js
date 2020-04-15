@@ -67,8 +67,8 @@ class Gameboy extends Component {
 
     onUpButton = () => {
         if (this.state.wrongSpelling === true) {
-            console.log('Empty Search Field')
-            this.setState({wrongSpelling:true});
+            this.onFetchData(1);
+            this.setState({wrongSpelling:false});
         } else {
             this.onFetchData(this.state.data.id + 1);
             this.setState({wrongSpelling:false});
