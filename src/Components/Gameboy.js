@@ -41,8 +41,8 @@ class Gameboy extends Component {
 
     onButtonSubmit = () => {
         if (this.state.value === '') {
-            console.log('Empty Search Field')
             this.setState({wrongSpelling:true});
+            console.log('Empty Search Field')
         } else {
             this.onFetchData(this.state.value.toLowerCase());
             this.setState({wrongSpelling:false});
@@ -66,8 +66,8 @@ class Gameboy extends Component {
     }
 
     onUpButton = () => {
-        if (this.state.wrongSpelling === true) {
-            this.onFetchData(1);
+        if ((this.state.wrongSpelling === false)&&(this.state.value === '')) {
+            this.onFetchData(this.state.data.id + 1 || 1);
             this.setState({wrongSpelling:false});
         } else {
             this.onFetchData(this.state.data.id + 1);
