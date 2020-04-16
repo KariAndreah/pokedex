@@ -69,6 +69,9 @@ class Gameboy extends Component {
         if ((this.state.wrongSpelling === false)&&(this.state.value === '')) {
             this.onFetchData(this.state.data.id + 1 || 1);
             this.setState({wrongSpelling:false});
+        } else if ( this.state.wrongSpelling === true){
+            this.onFetchData(1);
+            this.setState({wrongSpelling:false});
         } else {
             this.onFetchData(this.state.data.id + 1);
             this.setState({wrongSpelling:false});
