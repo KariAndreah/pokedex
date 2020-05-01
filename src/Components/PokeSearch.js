@@ -11,7 +11,7 @@ const PokeSearch = ({ onButtonSubmit, getSearch, onAboutButton, onStatsButton, o
                 <div className='searchBox'>
                     <input type='search' placeholder={'Name or number'} 
                         onChange={getSearch} onKeyDown={enterKeyDown} />
-                    <button onClick={() => {
+                    <button className = 'searchButton' onClick={() => {
                         onButtonSubmit();
                     }}>Search</button>
                 </div>
@@ -23,10 +23,10 @@ const PokeSearch = ({ onButtonSubmit, getSearch, onAboutButton, onStatsButton, o
                         <div className='bottomButtons'>
                             <button className='aboutButton' onClick={() => {
                                 onAboutButton();
-                            }}>About</button>
+                            }}></button>
                             <button className='statsButton' onClick={() => {
                                 onStatsButton();
-                            }}>Stats</button>
+                            }}></button>
                             <div >
                                 <p className = 'labels'>About</p>
                                 <p className = 'labels'>Stats</p>

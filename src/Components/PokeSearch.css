@@ -15,6 +15,9 @@
     width:300px;
     margin: auto;
 }
+.searchButton:hover{
+    cursor: pointer;
+}
 .rowButtons{
     flex:2;
     display: flex;
@@ -44,6 +47,12 @@
     margin-right: 4px;
     background-color: black;
     border-color: darkslategrey;
+    cursor: pointer;
+    height:20px;
+    width:40px;
+}
+.aboutButton:hover{
+    cursor: pointer;
 }
 .statsButton{
     display: inline;
@@ -51,6 +60,11 @@
     background-color: black;
     border-color: darkslategrey;
     margin-bottom: 8px;
+    height:20px;
+    width:40px;
+}
+.statsButton:hover{
+    cursor: pointer;
 }
 .labels{
     display: inline;
@@ -74,6 +88,9 @@
     margin-left: 35px;
     padding:13px;
 }
+.upButton:hover{
+    cursor: pointer;
+}
 .downButton{
     background-color: black;
     border: darkslategrey 1px solid;
@@ -83,4 +100,7 @@
     color:white;
     display: flex;
     padding:7px;
+}
+.downButton:hover{
+    cursor: pointer;
 }
